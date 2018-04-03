@@ -8,6 +8,21 @@
 
 #include <iostream>
 using namespace std;
+bool arrayTest (int * posA, int * posB, int i) {
+
+	for (int pos = 0; pos < i; ++pos) {
+		if ( *posA == *posB){
+			posA++;
+			posB++;
+			continue;
+		}
+		else {
+			return false;
+		}
+	}
+	return true;
+
+}
 
 int main() {
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
@@ -17,5 +32,20 @@ int main() {
 	cout << "!!!Hello World GIT!!!" << endl; // prints !!!Hello World!!!
 	cout << "!!!Hello World GIT!!!" << endl; // prints !!!Hello World!!!
 	cout << "start" << endl;
+	int j = 0;
+	for (int i = 0; i < 10; ++i) {
+		j++;
+	}
+	cout << "The sum is: "  << j << endl;
+	int arrayA[3] = {1,2,4};
+	int arrayB[3] = {1,2,3};
+
+	if (arrayTest(arrayA, arrayB, 3)) {
+		cout << "equal" << endl;
+	}
+	else {
+		cout << "Not equal" << endl;
+	}
 	return 0;
+
 }
