@@ -7,7 +7,11 @@
 //============================================================================
 
 #include <iostream>
+#include "template.h"
 using namespace std;
+
+
+
 bool arrayTest (int * posA, int * posB, int i) {
 
 	for (int pos = 0; pos < i; ++pos) {
@@ -25,6 +29,9 @@ bool arrayTest (int * posA, int * posB, int i) {
 }
 
 int main() {
+
+	myTest<int> testClass(1,2);
+
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
@@ -46,6 +53,8 @@ int main() {
 	else {
 		cout << "Not equal" << endl;
 	}
+	testClass.print();
+	testClass.~myTest();
 	return 0;
 
 }
